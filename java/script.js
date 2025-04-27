@@ -1,0 +1,1 @@
+$("#zebraFirst").mouseover(function(){this.src="http://macloo.com/images/african_animals/zebra.png"}).mouseout(function(){this.src="http://macloo.com/images/african_animals/lion.png"});

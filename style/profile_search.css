@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: whitesmoke;
+    font-family: 'Inter var', sans-serif;
+    font-feature-settings: 'cv11';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .profile-card {
+    position: relative;
+    border: 2px solid #000;
+    border-radius: 1rem;
+    background: #fff;
+    width: 100vh;
+    }
+  
+  .profile-card::before,
+  .profile-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 1rem;
+    z-index: -1;
+    transition: transform 200ms ease-out;
+  }
+  
+  .profile-card:hover::before {
+    transform: rotate(-3deg) scale(1.02) translate(-1%);
+  }
+  
+  .profile-card:hover::after {
+    transform: rotate(-6deg) scale(1.02) translate(-1%);
+    z-index: -2;
+    transition-delay: 100ms;
+  }
+  
+  .profile-card__avatar {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border: 2px solid #000;
+    object-fit: cover;
+    box-shadow: 0 2px 0 #000;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    border-radius: 1rem;
+  }
+  
+  .profile-card__bio {
+    background: #f37718;
+    padding: 2rem;
+    border-bottom: 2px dashed #000;
+    text-align: center;
+    border-radius: 1rem 1rem 0 0;
+    overflow: hidden;
+  }
+  
+  .profile-card__bio-name {
+    font-size: 1.25em;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  
+  .profile-card__bio-title {
+    font-size: 0.875em;
+    font-weight: 600;
+  }
+  
+  .profile-card__links {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+    gap: 0.6rem;
+  }
+  
+  .profile-card__links-button {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+    background-color: #e0e0e0; /* Light gray background */
+    color: #000; /* Ensure text remains black */
+    transition: box-shadow 200ms ease, background-color 200ms ease;
+    text-decoration: none;
+    /* padding: 1rem; Optional: Uncomment to add padding back */
+}
+
+.profile-card__links-button:hover {
+    background-color: #5dc4e1; /* Slightly darker gray on hover */
+    box-shadow: -3px 3px 0 #000;
+}
+
+/* other css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.student-info {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: auto;
+}
+.student-info p {
+    margin: 10px 0;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+.title {
+    text-align: center;
+}
+.input-space {
+    margin-right: 5px;
+}
+/* New CSS for the back button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    color: #007BFF;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color:rgb(0, 0, 0);
+}
+
+.links-update {
+    justify-content: flex-end;
+}
+
+.links-update {
+    text-align: right; /* Align the text to the right */
+    margin-top: 10px;  /* Optional, to add some space above the edit link */
+}
+
+.links-update a {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.links-update a:hover {
+    text-decoration: underline;
+}
+
+/* Create the broken line effect */
+.hr_before_update {
+    position: relative;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.hr_before_update::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: repeating-linear-gradient(90deg, #000 0%, #000 1%, transparent 1.5%, transparent 1%);
+    margin-bottom: 10px; /* Adjust the space between the line and the update link */
+}
+
+.hr_before_update .links-update {
+    text-align: right; /* Align the update link to the right */
+}
