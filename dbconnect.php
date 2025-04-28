@@ -1,7 +1,7 @@
 <?php
 $servername= "localhost";
-$username = "root";
-$password = "315683";  
+$username = "root"; //change if needed
+$password = "";  //change if needed
 $database = "studentmsdb";  
 
 /*=======Procedural Style Connection========*/
