@@ -1,1 +1,1 @@
-# StuInfoSystem
+# Student-Information-System
